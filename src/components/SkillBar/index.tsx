@@ -13,8 +13,9 @@ export const SkillBar = ({ skill, skillLevel, width }: SkillBarProps) => {
         <h3>{skill}</h3>
         <p>{skillLevel}</p>
       </div>
+      
       <ProgressBarContainer>
-        <ProgressBar style={{ width: `${width}%` }}></ProgressBar>
+        <ProgressBar width={width} />
       </ProgressBarContainer>
     </Container>
   )

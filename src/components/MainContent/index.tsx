@@ -13,15 +13,20 @@ import { Project } from '../../types'
 
 
 export const MainContent = () => {
-  const [latestProject, setLatestProject] = useState<Project>();
-  const [projects, setProjects] = useState<Project[]>();
+  const [latestProject, setLatestProject] = useState<Project | undefined>();
+  const [projects, setProjects] = useState<Project[]>([]);
+  const [fetchError, setFetchError] = useState(false);
 
   useEffect(() => {
     const loadProjects = async () => {
-      const featuredProject = await api.get<Project>('/projects/1').then(response => response.data);
-      if (featuredProject) setLatestProject(featuredProject);
-      const resProjects = await api.get<Project[]>('/projects').then(response => response.data);
-      if (resProjects) setProjects(resProjects.filter(project => project.id !== 1));
+      try {
+        await Promise.all([
+          api.get<Project>('/projects/1').then(response => setLatestProject(response.data)),
+          api.get<Project[]>('/projects?id_ne=1').then(response => setProjects(response.data))
+        ]);
+      } catch (error) {
+        setFetchError(true);
+      }
     }
 
     loadProjects();
@@ -32,7 +37,11 @@ export const MainContent = () => {
       <AboutMe />
       <Infos />
       <Skills />
-      <Projects latestProject={latestProject} projects={projects}/>
+      <Projects 
+        latestProject={latestProject} 
+        projects={projects}
+        fetchError={fetchError}
+      />
     </Container>
   )
 }

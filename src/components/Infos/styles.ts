@@ -15,9 +15,7 @@ export const Container = styled.div`
   a {
     display: flex;
     align-items: center;
-    color: lightgray;
-
-    /* margin-bottom: 15px; */
+    color: var(--light-gray);
 
     span {
       color: var(--link-green);
@@ -28,9 +26,7 @@ export const Container = styled.div`
   p {
     display: flex;
     align-items: center;
-    color: lightgray;
-
-    /* margin-bottom: 15px; */
+    color: var(--light-gray);
 
     span {
       color: var(--text-body);

@@ -17,8 +17,8 @@ export const Container = styled.div`
 export const FeaturedProjectContainer = styled.div`
   text-align: center;
 
-  padding-bottom: 30px;
-  margin-bottom: 60px;
+  padding-bottom: 70px;
+  margin-bottom: 50px;
 
   border-bottom: 1px solid lightgray;
 
@@ -41,7 +41,7 @@ export const FeaturedProjectContainer = styled.div`
 
   p {
     text-align: left;
-    font: 400 16px Aria, sans-serif;
+    font: 400 1rem Aria, sans-serif;
     margin: 25px 0;
   }
 
@@ -50,18 +50,17 @@ export const FeaturedProjectContainer = styled.div`
     align-items: center;
     justify-content: space-between;
 
-    width: 12rem;
-    height: 2.2rem;
+    width: 220px;
+    height: 38px;
     border: 0;
     border-radius: 0.25rem;
 
     background: var(--light-blue);
     color: #fff;
 
-    font-size: 0.8rem;
     font-weight: 600;
 
-    padding: 0 1.1rem;
+    padding: 0 18px;
     margin: 0 auto;
 
     transition: filter 0.2s;
@@ -69,13 +68,5 @@ export const FeaturedProjectContainer = styled.div`
     &:hover {
       filter: brightness(0.9);
     }
-  }
-`;
-
-export const ProjectContainer = styled.div`
-  padding: 10px;
-
-  img {
-    width: 35rem;
   }
 `;

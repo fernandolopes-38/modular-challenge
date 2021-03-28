@@ -7,6 +7,7 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-icons": "^4.2.0",
+    "react-loader-spinner": "^4.0.0",
     "react-scripts": "4.0.3",
     "styled-components": "^5.2.1"
   },
@@ -27,7 +28,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "server": "json-server db.json -p 3333 -w"
+    "server": "json-server db.json -p 3333 -w -d 1000"
   },
   "eslintConfig": {
     "extends": [

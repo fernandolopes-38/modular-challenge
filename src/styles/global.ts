@@ -10,14 +10,16 @@ export const GlobalStyle = createGlobalStyle`
     --card: #FFFFFF;
     
     --text-title: #49515C;
-    --text-subtitle: #687987;
     --subtitle: #5D7080;
+    --text-subtitle: #687987;
     --text-body: #000000;
 
-    --green: #57B952;
     --skillbar-green: #69CA8E;
+    --green: #57B952;
     --link-green: #06A24E;
     --light-blue: #4B9FC6;
+    --gray: #808080;
+    --light-gray: #d3d3d3;
   }
 
   * {

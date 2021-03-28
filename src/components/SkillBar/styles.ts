@@ -13,13 +13,13 @@ export const Container = styled.div`
     h3 {
       font-size: 18px;
       font-weight: 600;
-      color: gray;
+      color: var(--gray);
     }
 
     p {
       font-size: 14px;
       font-weight: 300;
-      color: lightgray;
+      color: var(--light-gray);
     }
   }
 `;
@@ -30,12 +30,16 @@ export const ProgressBarContainer = styled.div`
   background: #e9eaea;
 `;
 
-export const ProgressBar = styled.div`
+interface ProgressBarProps {
+  width: number;
+}
+
+export const ProgressBar = styled.div<ProgressBarProps>`
   position: absolute;
   top: 0;
   left: 0;
   height: 18px;
   background: var(--skillbar-green);
 
-  width: 50%;
+  width: ${({ width }) => width}%;
 `;

@@ -1,22 +1,23 @@
 import { Container, FeaturedProjectContainer } from './styles'
-import { Project } from '../../types';
-import { ProjectCard } from '../ProjectCard';
+import { AiOutlineLike } from 'react-icons/ai';
 
-import { AiOutlineLike } from 'react-icons/ai'
+import { ProjectCard } from '../ProjectCard';
+import { LoaderSpinner } from '../LoaderSpinner';
+
+import { Project } from '../../types';
 
 interface ProjectsProps {
+  fetchError: boolean;
   latestProject: Project | undefined;
-  projects: Project[] | undefined;
+  projects: Project[];
 }
 
-export const Projects = ({ latestProject, projects }: ProjectsProps) => {
-  console.log('latestProject', latestProject);
-  console.log('projects', projects);
+export const Projects = ({ fetchError, latestProject, projects }: ProjectsProps) => {
   return (
     <Container>
       <h2>Latest Projects</h2>
       
-      {latestProject && 
+      {latestProject ? 
         <FeaturedProjectContainer>  
           <h3>{latestProject.title}</h3>
           <h4>{latestProject.subtitle}</h4>
@@ -26,13 +27,16 @@ export const Projects = ({ latestProject, projects }: ProjectsProps) => {
             <AiOutlineLike />
             BACK MY PROJECT
           </button>
-        </FeaturedProjectContainer>
+        </FeaturedProjectContainer> :
+        fetchError ?
+          <h3>None to show</h3> :
+          <LoaderSpinner />
       }
 
       <>
         {projects &&  
           projects.map(project =>
-            <ProjectCard project={project} />
+            <ProjectCard key={project.id} project={project} />
           )}
       </>
       

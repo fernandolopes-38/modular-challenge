@@ -19,7 +19,7 @@ export const Container = styled.div`
     }
 
     p {
-      font: 400 16px Arial, sans-serif;
+      font: 400 1rem Arial, sans-serif;
       margin-bottom: 15px;
     }
 
@@ -35,20 +35,6 @@ export const Container = styled.div`
   }
 
   @media (max-width: 860px) {
-    flex-direction: column;
-
-    img {
-      width: 100%;
-      height: 100%;
-    }
-
-    main {
-      margin-top: 15px;
-      margin-left: 0;
-    }
-  }
-
-  @media (max-width: 720px) {
     flex-direction: column;
 
     img {
