@@ -1,12 +1,13 @@
 import { MainContent } from './components/MainContent';
 import { Header } from './components/Header';
-import './styles/global.css';
+import { GlobalStyle } from './styles/global';
 
 export const App = () => {
   return (
     <>
       <Header />
       <MainContent />
+      <GlobalStyle />
     </>
   )
 }

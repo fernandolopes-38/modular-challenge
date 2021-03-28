@@ -3,10 +3,10 @@ import styled from 'styled-components';
 export const Container = styled.div`
   display: flex;
   justify-content: space-between;
-  width: 14rem;
+  width: 220px;
 
   color: white;
-  font-size: 1.1rem;
+  font-size: 18px;
 `;
 
 export const IconContainer = styled.div`
