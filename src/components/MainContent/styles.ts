@@ -13,4 +13,7 @@ export const Container = styled.main`
   gap: 2rem;
 
   padding: 3.5rem;
+
+  @media (max-width: 720px) {
+  }
 `;

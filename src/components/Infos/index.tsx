@@ -11,13 +11,13 @@ export const Infos = () => {
         <span>San francisco, US</span>
       </p>
 
-      <a href="#">
+      <a href="#email">
         <FiMail />
         <span>jameslee@website.com</span>
       </a>
 
 
-      <a href="#">
+      <a href="#website">
         <HiOutlineLink />
         <span>http://www.website.com</span>
       </a>
