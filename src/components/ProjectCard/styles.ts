@@ -7,7 +7,6 @@ export const Container = styled.div`
 
   img {
     height: 11rem;
-    /* height: 12rem; */
   }
 
   main {
@@ -32,6 +31,34 @@ export const Container = styled.div`
       span {
         margin-left: 10px;
       }
+    }
+  }
+
+  @media (max-width: 860px) {
+    flex-direction: column;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+
+    main {
+      margin-top: 15px;
+      margin-left: 0;
+    }
+  }
+
+  @media (max-width: 720px) {
+    flex-direction: column;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+
+    main {
+      margin-top: 15px;
+      margin-left: 0;
     }
   }
 `;

@@ -14,6 +14,17 @@ export const Container = styled.main`
 
   padding: 3.5rem;
 
+  @media (max-width: 860px) {
+    padding: 2rem;
+  }
+
   @media (max-width: 720px) {
+    grid-template-areas:
+      'a'
+      'd'
+      'b'
+      'c';
+
+    padding: 1rem;
   }
 `;
