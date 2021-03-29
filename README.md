@@ -4,7 +4,7 @@ The porpose of this project is to create a responsive template for desktop and m
 
 This project was developed using Reactjs.
 
-[Visualizar projeto online](https://challenge-modular.vercel.app/)
+[View project online](https://challenge-modular.vercel.app/)
 
 ## Instructions
 
