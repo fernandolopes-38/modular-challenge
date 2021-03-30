@@ -12,6 +12,5 @@ To run this project is necessary to:
 
 - clone this repository
 - run `yarn`
-- run `yarn server`
 - run `yarn start`
 - open `http://localhost:3000`
